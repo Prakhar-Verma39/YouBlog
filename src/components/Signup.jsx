@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 import authService from "../appwrite/auth"
 import {Link, useNavigate} from "react-router-dom"
-import {Login} from "../store/authSlice"
+import {login} from "../store/authSlice"
 import {Button, Input, Logo} from "./index"
 import { useDispatch } from "react-redux"
 import {useForm} from "react-hook-form"
@@ -36,12 +36,12 @@ function Signup () {
                 </h2>
                 <p className="mt-2 text-center text-base text-black/60">
                     Already have an account?&nbsp;
-                    <link 
+                    <Link 
                         to="/login"
                         className="font-medium text-primary transition-all duaration-200 hover:underline"
                     >
                         Sign In
-                    </link>
+                    </Link>
                 </p>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
                 <form onSubmit={handleSubmit(create)} >
@@ -61,7 +61,7 @@ function Signup () {
                             {...register("email", {
                                 required: true,
                                 validate: {
-                                    matchPattern: (value) => /^\w+([.-])?\w+)*@\w+([.-]?\w+)*(\.w{2,3})+$/.test(value) || "Email address must be a valid address",
+                                    matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || "Email address must be a valid address",
                                 }
                             })}
                         />

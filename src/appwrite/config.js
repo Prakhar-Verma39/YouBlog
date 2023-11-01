@@ -1,6 +1,6 @@
 // config service snippet
 
-import conf from '../conf.js';
+import conf from '../conf/conf.js';
 import {Client, ID, Databases, Storage, Query} from "appwrite";
 
 export class Service{
@@ -19,7 +19,7 @@ export class Service{
     async createPost ({title, slug, content, featuredImage, status, userId}) {
         try {
             return await this.databases.createDocument (
-                conf.appwwriteDatabaseId,
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
@@ -38,7 +38,7 @@ export class Service{
     async updatePost (slug, {title, content, featuredImage, status}) {
         try {
             return await this.databases.updateDocument (
-                conf.appwwriteDatabaseId,
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug,
                 {
@@ -56,7 +56,7 @@ export class Service{
     async deletePost (slug) {
         try {
             await this.databases.deleteDocument(
-                conf.appwwriteDatabaseId,
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug
             )
@@ -70,7 +70,7 @@ export class Service{
     async getPost (slug) {
         try {
             return await this.databases.getDocument (
-                conf.appwwriteDatabaseId,
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 slug
             )
@@ -83,7 +83,7 @@ export class Service{
     async getPosts (queries = [Query.equal("status", "active")]) {
         try {
             return await this.databases.listDocuments (
-                conf.appwwriteDatabaseId,
+                conf.appwriteDatabaseId,
                 conf.appwriteCollectionId,
                 queries,
                 100,
