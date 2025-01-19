@@ -13,7 +13,7 @@ export default function Post() {
     const userData = useSelector((state) => state.auth.userData);
 
     const isAuthor = post && userData ? post.userId === userData.$id : false;
-
+    
     useEffect(() => {
         if (slug) {
             appwriteService.getPost(slug).then((post) => {
@@ -31,7 +31,6 @@ export default function Post() {
             }
         });
     };
-
     return post ? (
         <div className="py-8">
             <Container>
@@ -39,28 +38,28 @@ export default function Post() {
                     <img
                         src={appwriteService.getFilePreview(post.featuredImage)}
                         alt={post.title}
-                        className="rounded-xl"
+                        className="max-w-xl max-h-80 rounded-xl"
                     />
 
                     {isAuthor && (
                         <div className="absolute right-6 top-6">
                             <Link to={`/edit-post/${post.$id}`}>
-                                <Button bgColor="bg-green-500" className="mr-3">
+                                <Button bgColor="bg-QuaternaryColor font-mono" className="mr-3">
                                     Edit
                                 </Button>
                             </Link>
-                            <Button bgColor="bg-red-500" onClick={deletePost}>
+                            <Button bgColor="bg-red-400 font-mono" onClick={deletePost}>
                                 Delete
                             </Button>
                         </div>
                     )}
                 </div>
                 <div className="w-full mb-6">
-                    <h1 className="text-2xl font-bold">{post.title}</h1>
+                    <h1 className="text-3xl blue-text-gradient font-playfairDisplay font-bold capitalize">{post.title}</h1>
                 </div>
-                <div className="browser-css">
+                <div className="browser-css text-base from-neutral-400 text-white text-justify bg-white bg-opacity-10 rounded-lg p-4 pr-6 pb-8">
                     {parse(post.content)}
-                    </div>
+                </div>
             </Container>
         </div>
     ) : null;

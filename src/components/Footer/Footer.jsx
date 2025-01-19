@@ -27,7 +27,7 @@ function Footer() {
                             <ul>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Features
@@ -35,7 +35,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Pricing
@@ -43,7 +43,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Affiliate Program
@@ -51,7 +51,7 @@ function Footer() {
                                 </li>
                                 <li>
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Press Kit
@@ -68,7 +68,7 @@ function Footer() {
                             <ul>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Account
@@ -76,7 +76,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Help
@@ -84,7 +84,7 @@ function Footer() {
                                 </li>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Contact Us
@@ -92,7 +92,7 @@ function Footer() {
                                 </li>
                                 <li>
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className=" font-mono font-bold text-gray-900 hover:text-gray-700"
                                         to="/"
                                     >
                                         Customer Support
@@ -109,27 +109,26 @@ function Footer() {
                             <ul>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="https://www.flaticon.com/free-animated-icons/blog"
-                                        title="blog animated icons"
+                                        className="font-mono font-bold text-gray-900 hover:text-gray-700"
+                                        to={`/credit/${"chai-aur-code"}`}
                                     >
-                                        Freepik - Flaticon
+                                        Chai aur Code
                                     </Link>
                                 </li>
                                 <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="http://www.freepik.com"
+                                        className="font-mono font-bold text-gray-900 hover:text-gray-700"
+                                        to={`/credit/${"javascript-mastery"}`}
                                     >
-                                        Slidesgo / Freepik
+                                        Javascript Mastery
                                     </Link>
                                 </li>
-                                <li>
+                                <li className="mb-4">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
+                                        className="font-mono font-bold text-gray-900 hover:text-gray-700"
+                                        to={`/credit/${"freepik"}`}
                                     >
-                                        Licensing
+                                        Freepik
                                     </Link>
                                 </li>
                             </ul>

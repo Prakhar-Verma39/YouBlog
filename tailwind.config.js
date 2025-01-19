@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+const { fontFamily } = require('tailwindcss/defaultTheme');
+
 export default {
   content: [
     "./index.html",
@@ -12,6 +15,10 @@ export default {
         TertiaryColor: '#FFF5E0',
         QuaternaryColor: '#41B06E',
         QuinaryColor: '#8DECB4',
+      },
+      fontFamily: {
+        playfairDisplay: ['Playfair Display', ...fontFamily.sans],
+        merriWeather: ['Merriweather', ...fontFamily.sans],
       },
     },
   },

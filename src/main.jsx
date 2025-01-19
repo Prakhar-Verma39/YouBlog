@@ -13,6 +13,7 @@ import AddPost from './pages/AddPost.jsx'
 import Signup from './pages/Signup.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
+import Credit from './pages/Credit.jsx'
 import AllPosts from './pages/AllPosts.jsx'
 
 const router = createBrowserRouter([
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
     {
         path: "/post/:slug",
         element: <Post />,
+    },
+    {
+        path: "/credit/:slug",
+        element: <Credit />,
     },
     ]
   }
