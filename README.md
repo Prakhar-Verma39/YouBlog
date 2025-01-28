@@ -11,7 +11,7 @@ To run YouBlog locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone [https://github.com/Prakhar-Verma39/YouBlog.git](https://github.com/Prakhar-Verma39/YouBlog.git)
+   git clone https://github.com/Prakhar-Verma39/YouBlog.git
    cd YouBlog
    ```
 
