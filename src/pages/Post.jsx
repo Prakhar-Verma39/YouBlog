@@ -57,7 +57,7 @@ export default function Post() {
                 <div className="w-full mb-6">
                     <h1 className="text-3xl blue-text-gradient font-playfairDisplay font-bold capitalize">{post.title}</h1>
                 </div>
-                <div className="browser-css text-base from-neutral-400 text-white text-justify bg-white bg-opacity-10 rounded-lg p-4 pr-6 pb-8">
+                <div className="browser-css text-base text-white text-justify bg-white bg-opacity-10 rounded-lg p-4 pr-6 pb-8">
                     {parse(post.content)}
                 </div>
             </Container>

@@ -17,7 +17,7 @@ function Login () {
         try {
             const session = await authService.login(data)
             if (session) {
-                const userData = await authService.getCurrentUser()
+                const userData = await authService.getCurrentUser();
                 if(userData) dispatch(authLogin(userData))
                 navigate("/")
             }
@@ -28,26 +28,9 @@ function Login () {
 
     return (
         <div
-        className="flex items-center justify-center w-full">
+        className="flex items-center justify-center font-mono w-full">
             <div
-            className={`mx-auto w-full max-w-lg bg-gray-100 rounded-xl p-10 border border-black/10`}>
-                <div className="mb-2 flex justify-center">
-                    <span className="inline-block w-full max-w-[100px]">
-                        <Logo width="100%"/>
-                    </span>
-                </div>
-                <h2 className="text-center text-2xl font-bold leading-tight">
-                    Sign in to your account
-                </h2>
-                <p className="mt-2 text-center text-base text-black/60">
-                    Don&apos;t have any account?&nbsp;
-                    <Link 
-                        to="/signup"
-                        className="font-medium text-primary transition-all duaration-200 hover:underline"
-                    >
-                        Sign Up
-                    </Link>
-                </p>
+            className={`mx-auto w-full max-w-lg text-QuinaryColor rounded-xl p-10 border border-black/10`}>
                 {error && <p className="text-red-600 mt-8 text-center">{error}</p>}
                 <form onSubmit={handleSubmit(login)} className="mt-8">
                     <div className="space-y-5">
@@ -69,11 +52,22 @@ function Login () {
                             {...register("password", {
                                 required: true
                             })}
+                            autoComplete
                         />
                         <Button
                             type="submit"
-                            className="w-full"
-                        >Sign in</Button>
+                            className="w-full">
+                            Login
+                        </Button>
+                        <p className="mt-2 text-center text-base text-white/80">
+                            Don&apos;t have any account?&nbsp;
+                            <Link 
+                                to="/signup"
+                                className="font-medium text-primary transition-all duaration-200 hover:underline"
+                            >
+                                Sign Up
+                            </Link>
+                        </p>
                     </div>
                 </form>
             </div>
