@@ -21,12 +21,10 @@ function RTE ({name, control, label, defaultValue=""}) {
                             height: 500,
                             menubar: true,
                             plugins: [
-                                "image",
                                 "advlist",
                                 "autolink",
                                 "lists",
                                 "link",
-                                "image",
                                 "charmap",
                                 "preview",
                                 "anchor",
@@ -35,12 +33,11 @@ function RTE ({name, control, label, defaultValue=""}) {
                                 "code",
                                 "fullscreen",
                                 "insertdatetime",
-                                "media",
                                 "table",
-                                "code",
                                 "help",
                                 "wordcount",
                                 "anchor",
+                                "media"
                             ],
                             toolbar:
                             'undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help',

@@ -39,6 +39,7 @@ function Signup() {
                         {...register("name", {
                             required: true,
                         })}
+                        className="text-[#141e46]"
                         />
                         <Input
                         label="Email: "
@@ -51,6 +52,7 @@ function Signup() {
                                 "Email address must be a valid address",
                             }
                         })}
+                        className="text-[#141e46]"
                         />
                         <Input
                         label="Password: "
@@ -58,6 +60,7 @@ function Signup() {
                         placeholder="Enter your password"
                         {...register("password", {
                             required: true,})}
+                        className="text-[#141e46]"
                         />
                         <Button type="submit" className="w-full">
                             Create

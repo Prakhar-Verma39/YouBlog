@@ -44,6 +44,7 @@ function Login () {
                                     matchPattern: (value) => /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(value) || "Email address must be a valid address",
                                 }
                             })}
+                            className="text-[#141e46]"
                         />
                         < Input
                             label="Password: "
@@ -52,6 +53,7 @@ function Login () {
                             {...register("password", {
                                 required: true
                             })}
+                            className="text-[#141e46]"
                             autoComplete
                         />
                         <Button
